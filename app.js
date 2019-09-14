@@ -122,6 +122,11 @@ function handleMessage(sender_psid, received_message) {
             "title": "Is this the right picture?",
             "subtitle": "Tap a button to answer.",
             "image_url": attachment_url,
+            "default_action": {
+              "type": "web_url",
+              "url": "https://pipilika.com",
+              "webview_height_ratio": "tall",
+            },
             "buttons": [
               {
                 "type": "postback",
@@ -132,6 +137,11 @@ function handleMessage(sender_psid, received_message) {
                 "type": "postback",
                 "title": "No!",
                 "payload": "no",
+              },
+              {
+                "type": "web_url",
+                "title": "Visit Website",
+                "url": "https://pipilika.com"
               }
             ],
           }]
